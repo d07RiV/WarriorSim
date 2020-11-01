@@ -72,7 +72,7 @@ onmessage = (event) => {
         const configPtr = module._allocConfig();
         const cfg = configPtr >> 2;
         module.HEAP32[cfg + 0] = params.player[0] != null ? params.player[0] : -1;
-        module.HEAP32[cfg + 1] = params.player[1] != null ? params.player[1] : -1;
+        module.HEAP32[cfg + 1] = params.player[1] != null ? (typeof params.player[1] === 'string' ? itemSlots.indexOf(params.player[1]) : params.player[1]) : -1;
         module.HEAP32[cfg + 2] = params.player[2] != null ? params.player[2] : -1;
         module.HEAP32[cfg + 3] = races.indexOf(params.player[3].race);
         module.HEAP32[cfg + 4] = params.player[3].aqbooks ? 1 : 0;
