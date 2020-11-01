@@ -112,10 +112,18 @@ profiles
       </ul>
     </div>
     <div class="bottom">
-      <div id="dps"></div>
+      <div id="weights-div">
+        <div id="weight-str"><span class="stat-name">Strength:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-agi"><span class="stat-name">Agility:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-ap"><span class="stat-name">Attack Power:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-crit"><span class="stat-name">Crit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+        <div id="weight-hit"><span class="stat-name">Hit Chance:</span><span class="stat-dps">12345</span><span class="stat-error">123</span></div>
+      </div>
+      <div id="dps-box"><span id="dps"></span><span id="dpserr"></span></div>
       <div id="stats"></div>
       <div id="time"></div>
       <a href="#" class="btn js-dps">DPS</a>
+      <a href="#" class="btn js-weights">STAT WEIGHTS</a>
       <a href="#" class="btn js-table">SHEET DPS</a>
       <a href="#" class="btn js-stats disabled">STATS</a>
       <a href="#" class="btn js-settings">SETTINGS</a>
@@ -151,6 +159,19 @@ profiles
           <li>
             <label>Simulations</label>
             <input type="text" name="simulations" value="50000" data-numberonly="true">
+          </li>
+          <li>
+            <label>Threads</label>
+            <select dir="rtl" name="threads">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
           </li>
           <li>
             <label>Fight Duration (min)</label>
