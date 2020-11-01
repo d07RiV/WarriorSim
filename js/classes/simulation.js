@@ -118,8 +118,8 @@ class SimulationWorkerParallel {
                             return src;
                         }
                     }
-                    result.mh = mergeWeapon(result.mh, data.mh);
-                    if (data.oh) result.oh = mergeWeapon(result.oh, data.oh);
+                    result.player.mh = mergeWeapon(result.player.mh, data.player.mh);
+                    if (data.player.oh) result.player.oh = mergeWeapon(result.player.oh, data.player.oh);
                 }
             });
             this.callback_finished(result);
