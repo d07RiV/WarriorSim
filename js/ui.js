@@ -322,6 +322,7 @@ SIM.UI = {
                 sim: Simulation.getConfig(),
             };
             var sim = new SimulationWorkerParallel(
+                MAX_WORKERS,
                 (report) => {
                     const mean = report.totaldmg / report.totalduration;
 
