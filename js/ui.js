@@ -222,6 +222,7 @@ SIM.UI = {
             return;
         }
         var sim = new SimulationWorkerParallel(
+            MAX_WORKERS,
             (report) => {
                 // Finished
                 // Technically, it is incorrect to calculate mean DPS like this, since fight duration varies...
@@ -611,7 +612,6 @@ SIM.UI = {
         localStorage.level = view.fight.find('input[name="level"]').val();
         localStorage.race = view.fight.find('select[name="race"]').val();
         localStorage.simulations = view.fight.find('input[name="simulations"]').val();
-        localStorage.threads = view.fight.find('select[name="threads"]').val();
         localStorage.timesecsmin = view.fight.find('input[name="timesecsmin"]').val();
         localStorage.timesecsmax = view.fight.find('input[name="timesecsmax"]').val();
         localStorage.executeperc = view.fight.find('input[name="executeperc"]').val();

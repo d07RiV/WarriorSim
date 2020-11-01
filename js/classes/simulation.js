@@ -51,8 +51,8 @@ class SimulationWorker {
 }
 
 class SimulationWorkerParallel {
-    constructor(callback_finished, callback_update, callback_error) {
-        this.threads = parseInt($('select[name="threads"]').val());
+    constructor(threads, callback_finished, callback_update, callback_error) {
+        this.threads = threads;
         this.callback_finished = callback_finished;
         this.callback_update = callback_update;
         this.states = [...Array(this.threads)];
